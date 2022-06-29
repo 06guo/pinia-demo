@@ -3,6 +3,9 @@
     <button @click="handleClick">点击增加</button>
     <button @click="handleClickPatch">修改数据（$patch）</button>
     <button @click="handleClickMethod">修改数据（传递箭头函数）</button>
+    <button @click="handleClickActions">修改数据（actions）</button>
+    <button @click="handleClickChangePhone">改变电话号码</button>
+    <button @click="getList">显示list</button>
   </div>
 </template>
 
@@ -29,6 +32,15 @@ const handleClickMethod = () => {
     state.count++,
     state.helleWord = state.helleWord === 'hello html' ? 'hello world' : 'hello html'
   })
+}
+const handleClickActions = () => {
+  store.changeState()
+}
+const handleClickChangePhone = () => {
+  store.phone = '14049494949'
+}
+const getList = () => {
+  store.getList()
 }
 </script>
 

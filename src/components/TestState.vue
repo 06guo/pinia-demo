@@ -1,9 +1,11 @@
 <template>
   <div>{{store.helleWord}}</div>
   <div>{{store.count}}</div>
+  <div>{{store.phoneHidden}}</div>
   <div>测试1234</div>
   <div>{{count}}</div>
   <div>{{helleWord}}</div>
+  <div>{{phoneHidden}}</div>
 </template>
 
 <script setup lang="ts">
@@ -16,7 +18,7 @@ console.log(store, 'store====')
 // 解构以后就不是响应式的了
 // const { helleWord, count } = store
 // 所以提供了 storeToRefs()方法
-const { helleWord, count} = storeToRefs(store)
+const { helleWord, count, phoneHidden} = storeToRefs(store)
 </script>
 
 <style lang="scss" scoped>
